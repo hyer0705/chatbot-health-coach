@@ -36,7 +36,7 @@ else:
 
     if user_input := st.chat_input("건강 관련 질문을 입력하세요..."):
         st.session_state.messages.append({"role": "user", "content": user_input})
-        with st.chat_messages("user"):
+        with st.chat_message("user"):
             st.markdown(user_input)
 
         with st.chat_message("assistant"):
