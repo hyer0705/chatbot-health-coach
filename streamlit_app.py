@@ -46,5 +46,6 @@ else:
                     messages=st.session_state.messages,
                 )
                 assistant_message = response.choices[0].message.content
+            st.markdown(assistant_message)
 
         st.session_state.messages.append({"role": "assistant", "content": assistant_message})
